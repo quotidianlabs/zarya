@@ -60,6 +60,12 @@ These shape every ticket and are not up for re-litigation without redrawing the 
 
 <!-- one line per closed ticket: gist + link. -->
 
+- [Survey of local-first sync options for Flutter](issues/03-sync-engine-survey.md): The field is
+  thin. ElectricSQL pivoted away from write-path sync and was acquired by Databricks in Aug 2026;
+  Turso tells you not to use libSQL for sync; cr-sqlite is stalled with no Dart binding. Only
+  **PowerSync** has a first-party GA Flutter SDK with Drift support and web, and its server is
+  source-available-with-non-compete, not open source. **Hand-rolling over a plain backend is a
+  serious candidate, not a fallback.**
 - [Is Drift on sqlite-wasm production-viable?](issues/04-drift-sqlite-wasm-viable.md): Yes, under
   seven conditions - the binding one is that the web app must be served **cross-origin isolated**
   (COOP/COEP), which constrains hosting. iOS Safari evicts the database after seven days of

@@ -27,4 +27,11 @@ Settle the storage shape:
 - Whether `habbits`' `(habit, local date)` completion uniqueness survives two devices checking
   off the same day.
 
+**Constraint surfaced by [the sync survey](03-sync-engine-survey.md):** if PowerSync wins
+[Which sync engine?](06-which-sync-engine.md), much of this ticket is decided for you and not in
+your favour. PowerSync tables are views over a schemaless JSON store, so the schema is declared
+twice and only `text`, `integer` and `real` exist client-side. That removes column-level type
+guarantees from Drift, which is a direct hit on `nooka` ADR 0001's premise. Weigh that as a cost
+of the engine, not a detail to sort out afterwards.
+
 Whatever is decided here almost certainly wants an ADR in the new repo.
