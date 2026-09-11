@@ -1,7 +1,7 @@
 # Survey of local-first sync options for Flutter
 
 Type: research
-Status: open
+Status: claimed
 Blocked by: -
 
 ## Question

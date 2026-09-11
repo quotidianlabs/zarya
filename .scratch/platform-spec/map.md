@@ -58,7 +58,12 @@ These shape every ticket and are not up for re-litigation without redrawing the 
 
 ## Decisions so far
 
-<!-- one line per closed ticket: gist + link. Empty until the first ticket resolves. -->
+<!-- one line per closed ticket: gist + link. -->
+
+- [Is Drift on sqlite-wasm production-viable?](issues/04-drift-sqlite-wasm-viable.md): Yes, under
+  seven conditions - the binding one is that the web app must be served **cross-origin isolated**
+  (COOP/COEP), which constrains hosting. iOS Safari evicts the database after seven days of
+  disuse, which makes the sync layer load-bearing for correctness on web, not just convenience.
 
 ## Not yet specified
 

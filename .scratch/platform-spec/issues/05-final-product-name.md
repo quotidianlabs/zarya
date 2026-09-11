@@ -1,7 +1,7 @@
 # Final product name
 
 Type: research
-Status: open
+Status: claimed
 Blocked by: -
 
 ## Question

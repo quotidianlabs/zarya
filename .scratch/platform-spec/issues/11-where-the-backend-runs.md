@@ -21,4 +21,11 @@ Once [Which sync engine?](06-which-sync-engine.md) is settled, the server side b
   Dart shares types and tooling with the clients; not writing one is less to run.
 - **How is the Flutter web build served**, and is it the same box?
 
+**Hard constraint, from [Is Drift on sqlite-wasm production-viable?](04-drift-sqlite-wasm-viable.md):**
+whatever serves the web build must send `Cross-Origin-Opener-Policy: same-origin` and
+`Cross-Origin-Embedder-Policy: require-corp`, or Drift silently falls back off OPFS to IndexedDB.
+The header posture must be fixed before launch and never changed afterwards, because changing it
+relocates the database with no automatic migration. This rules out any host that will not let you
+set response headers, and it means the Flutter build needs `--no-web-resources-cdn`.
+
 Cost and operational burden are the deciding axes here, not throughput. There is one user.
