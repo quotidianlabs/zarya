@@ -1,7 +1,7 @@
 # Final product name
 
 Type: research
-Status: claimed
+Status: resolved
 Blocked by: -
 
 ## Question
@@ -44,3 +44,49 @@ Generate a fresh shortlist under these constraints, then vet each:
 
 Note: the personal-tool bar means trademark risk is informational, not blocking. Category
 collision and RU readability are the real filters.
+
+## Answer
+
+Shortlist and full evidence: [research/05-final-product-name.md](../research/05-final-product-name.md).
+
+**Method.** The first three candidates generated in the style of the prior kill-list (`velmo`,
+`talvo`, `nimbo`) were all already taken, two by habit/affirmation apps - confirming this
+ticket's own lesson. The pool was rebuilt from **obscure concrete trade nouns** (joinery,
+roofing, horology, rope work, weaving): the `stint` profile of English-specific, semantically
+precise and unpoetic. ~25 screened, 10 vetted in depth against machine-readable sources - Apple's
+iTunes Search API in the US *and* RU storefronts, RuStore's own backend queried in both Latin and
+Cyrillic, scraped Google Play, the GitHub search API, Wiktionary's full language-section list per
+candidate, and a ~90-item Russian bad-substring scanner.
+
+**Recommended: `muntin`** - the bar that divides a window into panes.
+
+- Zero exact-name apps on all three stores, in both languages
+- Zero relevant GitHub projects
+- **Zero USPTO wordmarks in any class**
+- `мунтин` has no Russian entry, no bad substring, no brand shadow - **a cleaner Russian record
+  than `zarya`**
+
+Costs: English speakers will mistype it as *mountain*; it is a Catalan verb form (violates the
+"not an inflected form" rule, though in neither target language); and one small unregistered
+brand, muntin.digital, uses the word.
+
+**Runner-up: `purlin`** - the better-sounding word with the better metaphor and an identically
+clean store record. Ranked second because **Purlin Co. holds a live USPTO Class 42 registration
+for AI software**, operates purlin.com and purlin.app, and has 40,000 users. Trademark is
+informational at the personal-tool bar, so this is an override that can be made knowingly - but
+"already a live software brand holding the .com" is the same shape of fact that killed `ritma`.
+
+**The Russian substring scanner earned its keep again**, killing five candidates a non-Russian
+speaker would have shipped: `reglet` and `astragal` (both real Russian nouns), `pawl` (reads as
+`пол`), `collet` (one letter from `колет`), `soffit` (`софит`), and `mandrel` - which
+transliterates to `мандрель`, containing `манд-`. That is the `diurna`/`урна` failure exactly,
+and only the scanner caught it.
+
+**`kerf` was killed by an app released four days ago**: *Kerf: Calm Routine Planner*, Productivity
+and Lifestyle, released 2026-09-07, "build habits at your own pace". This namespace is being
+consumed in real time.
+
+Unverified: trademark is USPTO-only - EUIPO and Rospatent were unreachable. Domain *registration*
+status was not established, only HTTP reachability.
+
+**The pick itself is the human's.** This ticket surfaced the field; it does not choose.

@@ -16,6 +16,10 @@ nothing is left to decide before implementation sessions can start building.
 **Skills every session should consult**: `grilling` and `domain-modeling` by default. `research`
 for the AFK tickets. `prototype` where the question is "how should this look or behave".
 
+**Naming is a live race.** A rival app claimed one shortlisted name four days before it was
+vetted. Whatever name is finally picked must be re-checked against all three stores immediately
+before shipping, not just at decision time.
+
 **Bar**: a personal tool that happens to be published. Not a commercial product. No support
 obligation, no on-call, no migration guarantees to strangers. When a ticket's answer hinges on
 "but what if we sell this", the answer is: we don't, and that's a scoping question for a later
@@ -60,6 +64,11 @@ These shape every ticket and are not up for re-litigation without redrawing the 
 
 <!-- one line per closed ticket: gist + link. -->
 
+- [Final product name](issues/05-final-product-name.md): Shortlist built from obscure concrete
+  trade nouns - the unpoetic `stint` profile. **`muntin`** recommended (clean on all three stores,
+  zero USPTO wordmarks, cleaner Russian record than `zarya`); `purlin` runner-up but Purlin Co.
+  holds a live Class 42 software mark. **The pick is still open** - the working name stands until
+  it is made.
 - [Survey of local-first sync options for Flutter](issues/03-sync-engine-survey.md): The field is
   thin. ElectricSQL pivoted away from write-path sync and was acquired by Databricks in Aug 2026;
   Turso tells you not to use libSQL for sync; cr-sqlite is stalled with no Dart binding. Only
