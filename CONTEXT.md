@@ -2,7 +2,7 @@
 
 A local-first, multi-device-synced productivity platform for iOS, Android and the web, in English
 and Russian. It holds habits, tasks and a focus timer, joined by the focus session and surfaced as
-one timeline. `zarya` is a working name.
+one timeline.
 
 ## Language
 
