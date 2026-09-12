@@ -24,3 +24,13 @@ Build a cheap, throwaway prototype - a rough UI, not production code - to answer
 - Does it scroll through past and future days, or is it strictly today?
 
 Link the prototype from this ticket. Do not build it into a real app.
+
+**Settled by [What is a Session?](01-what-is-a-session.md), narrowing this ticket:** sessions are
+strictly past-facing (there are no planned sessions), so the timeline's future half holds only
+habits and tasks due. A session row carries its target's name, its focused time, and an optional
+note which is the whole label for a **freeform** session, so the prototype must show what a
+freeform row looks like next to a targeted one. A sitting is one row however long it ran, and
+sessions may legally overlap, so the layout has to survive two simultaneous rows without looking
+broken. Sessions are filed under the local date they *started*, so one crossing midnight appears
+on the earlier day. The "where does start-a-session live" question is unchanged and still the most
+important one here.

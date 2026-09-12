@@ -20,6 +20,11 @@ for the AFK tickets. `prototype` where the question is "how should this look or 
 vetted. Whatever name is finally picked must be re-checked against all three stores immediately
 before shipping, not just at decision time.
 
+**The repo is `zarya/` itself.** It is the greenfield product repo, not a planning scratchpad:
+the emerging glossary lives in [CONTEXT.md](../../CONTEXT.md) and decisions hard enough to warrant
+one get an ADR in [docs/adr/](../../docs/adr/). This map lives under `.scratch/` and is not part of
+the product.
+
 **Bar**: a personal tool that happens to be published. Not a commercial product. No support
 obligation, no on-call, no migration guarantees to strangers. When a ticket's answer hinges on
 "but what if we sell this", the answer is: we don't, and that's a scoping question for a later
@@ -45,6 +50,8 @@ These shape every ticket and are not up for re-litigation without redrawing the 
 - **Federated model, not unified.** Habit and Task stay separate entities with separate tables.
   The Session carries a polymorphic reference to either. There is no `Doable` supertype - that
   road ends in a bag of nullable columns, which is exactly what `nooka`'s model avoids.
+  Refined by [What is a Session?](issues/01-what-is-a-session.md) into a three-way sum with
+  `Freeform` as a first-class variant, so the reference is never null.
 - **The backend has one job: syncing one user's data across their own devices.** Not
   collaboration, not monetization, not accounts-as-a-product.
 - **Local-first survives.** SQLite stays the source of truth on each device; the server is a
@@ -64,6 +71,13 @@ These shape every ticket and are not up for re-litigation without redrawing the 
 
 <!-- one line per closed ticket: gist + link. -->
 
+- [What is a Session?](issues/01-what-is-a-session.md): A **`FocusSession`** is an immutable record
+  of one sitting on one target (`OnHabit | OnTask | Freeform`, exactly one, never null). Written
+  once on stop, never updated, no side effects on its target, no planned sessions, no synced
+  running timer. **Only ever created or tombstoned, so it needs no merge rule on any engine.**
+  Costs accepted: pomodoro counts are not derivable, and a running timer does not follow you
+  between devices. Glossary in [CONTEXT.md](../../CONTEXT.md), rationale in
+  [ADR 0001](../../docs/adr/0001-focus-sessions-are-immutable-side-effect-free-history.md).
 - [Final product name](issues/05-final-product-name.md): Shortlist built from obscure concrete
   trade nouns - the unpoetic `stint` profile. **`muntin`** recommended (clean on all three stores,
   zero USPTO wordmarks, cleaner Russian record than `zarya`); `purlin` runner-up but Purlin Co.
@@ -89,9 +103,6 @@ In scope, but not yet sharp enough to ticket. Graduates as the frontier advances
   three times? Blocked behind the sync model.
 - **Conflict UX.** Whatever the conflict *rule* turns out to be, there is a separate question of
   what, if anything, the user is shown when one happens.
-- **The pomodoro's own behaviour.** Break lengths, long-break cadence, what a partial or
-  abandoned session records, whether a completed session can itself complete a habit. Downstream
-  of the Session model.
 - **Export, backup, and getting data out.** `nooka` has manual Google Drive backup; `habbits` has
   none. A synced product changes what backup even means.
 - **Migrating my own existing nooka and habbits data in.** Not a user migration - a one-off
@@ -102,6 +113,8 @@ In scope, but not yet sharp enough to ticket. Graduates as the frontier advances
   layout and whether the brand name is ever localised are open.
 - **Review and analytics surfaces.** Streaks, completion percent, session history. Both existing
   apps have carefully-designed derived metrics; how they combine across types is unexplored.
+  Constrained by [What is a Session?](issues/01-what-is-a-session.md): **focused time is the only
+  unit sessions can contribute**, since interval counts are not recorded.
 
 ## Out of scope
 

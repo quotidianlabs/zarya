@@ -23,3 +23,13 @@ but the *product* answer differs per entity and has to be decided deliberately:
 
 The output is a per-entity rule, not a single global policy. Where a rule loses data, say so
 explicitly and decide whether that is acceptable at the personal-tool bar.
+
+**Settled by [What is a Session?](01-what-is-a-session.md):** the Session bullet above is no longer
+a "confirm that" - it is decided, and decided by construction. A `FocusSession` is written once on
+stop and thereafter only created or tombstoned; no field of it is ever updated, it has no side
+effects on its target, and there is no synced running timer. Sessions therefore need no merge rule
+on any engine, hand-rolled included. The only session-shaped question left for this ticket is what
+happens when a target is deleted on one device while a session referencing it is created on
+another: the answer there is already fixed too (the session carries a name snapshot and survives a
+dangling id), so it degrades rather than conflicts. Overlapping sessions from two devices are
+explicitly legal and must not be validated away.
