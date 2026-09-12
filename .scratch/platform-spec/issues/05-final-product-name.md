@@ -90,3 +90,24 @@ Unverified: trademark is USPTO-only - EUIPO and Rospatent were unreachable. Doma
 status was not established, only HTTP reachability.
 
 **The pick itself is the human's.** This ticket surfaced the field; it does not choose.
+
+## The pick
+
+**`zarya` stays.** The working name becomes the real one.
+
+`zarya` was rated **usable** by this ticket's own kill-list, not dead, so keeping it is a live
+option rather than a refusal to decide. It carries three known costs, accepted knowingly:
+
+- **Overwatch owns English search results** for the word.
+- **Soviet-heritage connotation in Russian**, which is a target locale.
+- **ZARA proximity**, phonetic and visual.
+
+`muntin` had the cleaner record on every axis measured - zero apps on all three stores in both
+languages, zero USPTO wordmarks in any class, and a cleaner Russian reading than `zarya` itself.
+It was passed over anyway. At the personal-tool bar, store-search discoverability and trademark
+headroom are worth little, and every artifact already carries `zarya`.
+
+**The standing re-check still applies.** The map's Notes require the name to be re-verified
+against all three stores immediately before shipping, not just at decision time, because this
+namespace is being consumed in real time - `kerf` was killed by an app released four days before
+it was vetted. Choosing the incumbent does not exempt it from that check.

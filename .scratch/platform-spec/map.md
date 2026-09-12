@@ -7,7 +7,7 @@ productivity platform under `quotidianlabs` - habits, tasks, and a pomodoro time
 **focus session as the spine** and a **unified timeline as the surface**. The map is done when
 nothing is left to decide before implementation sessions can start building.
 
-`zarya` is a **working name**. See [Final product name](issues/05-final-product-name.md).
+The product is **`zarya`**. See [Final product name](issues/05-final-product-name.md).
 
 ## Notes
 
@@ -81,8 +81,9 @@ These shape every ticket and are not up for re-litigation without redrawing the 
 - [Final product name](issues/05-final-product-name.md): Shortlist built from obscure concrete
   trade nouns - the unpoetic `stint` profile. **`muntin`** recommended (clean on all three stores,
   zero USPTO wordmarks, cleaner Russian record than `zarya`); `purlin` runner-up but Purlin Co.
-  holds a live Class 42 software mark. **The pick is still open** - the working name stands until
-  it is made.
+  holds a live Class 42 software mark. **Picked: `zarya` stays** - rated usable rather than dead,
+  and at the personal-tool bar store discoverability and trademark headroom are worth less than
+  not renaming everything. The pre-ship re-check against all three stores still stands.
 - [Survey of local-first sync options for Flutter](issues/03-sync-engine-survey.md): The field is
   thin. ElectricSQL pivoted away from write-path sync and was acquired by Databricks in Aug 2026;
   Turso tells you not to use libSQL for sync; cr-sqlite is stalled with no Dart binding. Only
