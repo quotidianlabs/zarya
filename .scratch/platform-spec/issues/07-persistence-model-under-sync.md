@@ -35,3 +35,11 @@ guarantees from Drift, which is a direct hit on `nooka` ADR 0001's premise. Weig
 of the engine, not a detail to sort out afterwards.
 
 Whatever is decided here almost certainly wants an ADR in the new repo.
+
+**Constraint from [What is a Session?](01-what-is-a-session.md):** `FocusSession` rows are
+create-and-tombstone only, never updated, so whatever change-tracking mechanism this ticket picks
+has to carry no per-field versioning for them. Two further demands: the **in-flight sitting** is
+device-local state that must persist across an app kill and must *never* be synced, so the storage
+design needs a place for durable local-only state outside the replicated tables; and a session
+stores its **UTC offset at start** alongside the start instant, which is a column the prior-art
+schemas have no equivalent of.
